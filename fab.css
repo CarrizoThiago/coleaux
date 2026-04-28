@@ -1,0 +1,42 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: darkslateblue;
+}
+
+.contenedor {
+    display: flex;
+    background-color: crimson;
+    width: 90%;
+    margin-left: 5%;
+    flex-direction: column;
+}
+.titulo {
+    width: 100%;
+    text-align: center;
+    background-color: royalblue;
+    color: white;
+    
+}
+.formulario {
+    width: 100%;
+    flex-direction: column;
+}
+.fila {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cajare {
+    width:100%;
+    background-color: teal;
+}
