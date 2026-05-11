@@ -1,42 +1,155 @@
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: darkslateblue;
+    padding: 20px;
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
 
 .contenedor {
     display: flex;
-    background-color: crimson;
-    width: 90%;
-    margin-left: 5%;
     flex-direction: column;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
 .titulo {
-    width: 100%;
     text-align: center;
-    background-color: royalblue;
-    color: white;
-    
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+.titulo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
 .formulario {
-    width: 100%;
-    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .fila {
     display: flex;
     flex-direction: row;
     width: 100%;
     padding: 10px;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+label {
+    font-weight: 600;
+    color: #555;
 }
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #3498db;
+}
+
+button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
 .cajare {
-    width:100%;
-    background-color: teal;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    line-height: 1.6;
+}
+
+#netoc,
+#exc {
+    margin: 5px 0;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+#tabla1,
+#tabla2,
+#tabla3,
+#tabla4,
+#divbus {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+#divbus p {
+    margin: 0;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #34495e;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f1f5f9;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
 }
