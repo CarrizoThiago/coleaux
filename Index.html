@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fab.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <form action="" id="formu">
+            <div class="fila"> <label for="vehiculo">Vehiculo: </label><input type="text" placeholder="ford mustang">
+            </div>
+            <div class="fila"> <label for="precio">Precio: </label><input type="text" placeholder="20000"></div>
+            <div class="fila"> <label for="cliente">Cliente: </label><input type="text" placeholder="Juan Perez"></div>
+            <button type="submit">Agregar</button>
+        </form>
+        <nav><button id="btn-mostrar">Mostrar Clientes</button></nav>
+        <form action="" id="buscador">
+            <div class="fila"> <label for="buscador">Buscar Cliente: </label><input type="text"
+                    placeholder="Juan Perez"></div>
+            <button type="submit">Buscar</button>
+        </form>
+        <form action="" id="preciosup">
+            <div class="fila"> <label for="precio">Precio: </label><input type="text" placeholder="20000"></div>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="resultados"></div>
+    </div>
+    <script src="fab.js"></script>
+</body>
+
+</html>
