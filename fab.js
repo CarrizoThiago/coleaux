@@ -22,10 +22,16 @@ document.getElementById("formu").addEventListener("submit", function (e) {
 function calculador(i) {
     let ivax = guardados[i].precio * 0.21;
     let contado = guardados[i].precio + ivax;
+    ivax.toFixed(2);
     let interes = contado * 0.10;
+    interes.toFixed(2);
     let precioconinteres = contado + interes;
     let cuotas24 = precioconinteres / 24;
+    cuotas24.toFixed(2);
     let cuotas36 = precioconinteres / 36;
+    cuotas36.toFixed(2);
+    contado.toFixed(2);
+    precioconinteres.toFixed(2);
     guardados[i].iva = ivax;
     guardados[i].contado = contado;
     guardados[i].interes = interes;
