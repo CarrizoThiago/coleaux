@@ -9,8 +9,11 @@
 </head>
 
 <body>
+    <div class="encabezado">
+        <h1>Tarea Array de Objetos2</h1>
+    </div>
     <div class="contenedor">
-        <form action="" id="formu">
+        <form action="" id="formu" class="formulario">
             <div class="fila"> <label for="vehiculo">Vehiculo: </label><input type="text" id="vehiculo"
                     placeholder="ford mustang">
             </div>
@@ -21,16 +24,17 @@
             <button type="submit">Agregar</button>
         </form>
         <nav><button id="btn-mostrar">Mostrar Clientes</button></nav>
-        <form action="" id="buscador">
-            <div class="fila"> <label for="buscador">Buscar Cliente: </label><input type="text"
+        <form action="" id="buscador" class="formulario">
+            <div class="fila"> <label for="buscador">Buscar Cliente: </label><input type="text" id="buscado"
                     placeholder="Juan Perez"></div>
             <button type="submit">Buscar</button>
         </form>
-        <form action="" id="preciosup">
-            <div class="fila"> <label for="precio">Precio: </label><input type="text" placeholder="20000"></div>
+        <form action="" id="preciosup" class="formulario">
+            <div class="fila"> <label for="precio">Precio: </label><input type="text" id="precios" placeholder="20000">
+            </div>
             <button type="submit">Buscar</button>
         </form>
-        <div id="resultados"></div>
+        <div id="resultados" class="result"></div>
     </div>
     <script src="fab.js"></script>
 </body>

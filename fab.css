@@ -1,0 +1,97 @@
+body {
+    background-color: #1a1a2e;
+    margin: 0;
+    padding: 0;
+
+}
+
+.contenedor {
+    width: 90%;
+    min-height: 100vh;
+    padding-top: 10svh;
+    margin-left: 5%;
+    background-color: #1a1a2e;
+    color: #e2e8f0;
+}
+
+.encabezado {
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    background-color: #1a4a8a;
+    color: #e2e8f0;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    ;
+
+}
+
+.formulario {
+    background-color: #16213e;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #e2e8f0;
+}
+
+table {
+    background-color: #0f3460;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #e2e8f0;
+    ;
+}
+
+button {
+    background-color: #e94560;
+}
+
+.result {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabla-resultados {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f3460;
+    color: #e2e8f0;
+}
+
+.tabla-resultados caption {
+    background: #e94560;
+    color: #e2e8f0;
+    padding: 10px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.tabla-resultados th {
+    background: #0d2d52;
+    color: #a0b4cc;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 1px solid #1a4a8a;
+}
+
+.tabla-resultados td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #1a4a8a;
+}
+
+.tabla-resultados tbody tr:nth-child(even) {
+    background: #0d2d52;
+}
+
+.tabla-resultados tbody tr:hover {
+    background: #1a4a8a;
+    cursor: pointer;
+}
