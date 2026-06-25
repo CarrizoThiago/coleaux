@@ -235,6 +235,7 @@ btnStock.addEventListener('click', async () => {
                 trb.appendChild(td7);
                 trb.appendChild(td8);
                 trb.appendChild(td9);
+                trb.classList.add('par');
 
                 tbody.appendChild(trb);
                 tabla.appendChild(tbody);
@@ -281,8 +282,8 @@ btnLimpiarStock.addEventListener('click', () => {
 
 
 
-
+// fin del json dos
 //--------------------------------------------------------------------⛔⛔⛔⛔⛔⛔⛔⛔⛔--------------------------------------------------------------------------------
-
+//inicio json tres
 
 
