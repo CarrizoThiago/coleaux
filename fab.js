@@ -285,5 +285,75 @@ btnLimpiarStock.addEventListener('click', () => {
 // fin del json dos
 //--------------------------------------------------------------------⛔⛔⛔⛔⛔⛔⛔⛔⛔--------------------------------------------------------------------------------
 //inicio json tres
+const btnLimpiar3 = document.getElementById('btnLimpiar3');
+btnLimpiar3.addEventListener('click', () => {
+    console.log('Botón limpiar 3 pulsado');
+    document.getElementById('resultado3').innerHTML = '';
+    document.getElementById('resultado3').classList.remove('cajares');
+});
+const btn3 = document.getElementById('btn3');
+btn3.addEventListener('click', async () => {
+    console.log('Botón 3 pulsado');
+    document.getElementById('resultado3').innerHTML = '';
+
+    const tabla = document.createElement('table');
+    const thead = document.createElement('thead');
+    const caption = document.createElement('caption');
+    caption.textContent = 'Productos';
+    tabla.appendChild(caption);
+    const tbody = document.createElement('tbody');
+    const trh = document.createElement('tr');
+    let th = ["Numero","nombre", "precio", "fecha_ingreso", "stock", "codigo", "categoria"];
+
+    for(let i = 0; i < th.length; i++){
+        trh.appendChild(document.createElement('th')).textContent = th[i];
+    }
+    thead.appendChild(trh);
+    tabla.appendChild(thead);
+
+    let resultados3 = await fetch('./json/tres.json');
+    let productos3 = await resultados3.json();
+
+    productos3.forEach((producto, indice)=>{
+        const tr = document.createElement('tr');
+        const td1 = document.createElement('td');
+        const td2 = document.createElement('td');
+        const td3 = document.createElement('td');
+        const td4 = document.createElement('td');
+        const td5 = document.createElement('td');
+        const td6 = document.createElement('td');
+        const td7 = document.createElement('td');
+        
+        td1.textContent = indice + 1;
+        td2.textContent = producto.nombre;
+        td3.textContent = producto.precio;
+        td4.textContent = producto.fecha_ingreso;
+        td5.textContent = producto.stock;
+        td6.textContent = producto._codigo;
+        td7.textContent = producto._categoria;
+        
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tr.appendChild(td5);
+        tr.appendChild(td6);
+        tr.appendChild(td7);
+        if(indice % 2 === 0){
+            tr.classList.add('par');
+        }else{
+            tr.classList.add('impar');
+        }
+        
+        tbody.appendChild(tr);
+    });
+
+    tabla.appendChild(tbody);
+    document.getElementById('resultado3').appendChild(tabla);
+    document.getElementById('resultado3').classList.add('cajares');
+});
+
+
+
 
 
