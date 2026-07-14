@@ -353,6 +353,98 @@ btn3.addEventListener('click', async () => {
     document.getElementById('resultado3').classList.add('cajares');
 });
 
+//fin de ejercicio 3
+//----------------------------------------------------------------------------⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔----------------------------------------------------------------
+//comienzo de ejercicio 4
+
+const btn4 = document.getElementById('btn4');
+const btnlimpiar4 = document.getElementById('btnLimpiar4');
+
+
+btnlimpiar4.addEventListener('click', () => {
+    document.getElementById('resultado4').innerHTML = '';
+    document.getElementById('resultado4').classList.remove('cajares');
+});
+
+btn4.addEventListener('click', async () => {
+    document.getElementById('resultado4').innerHTML = '';
+    const resultados4 = await fetch ('./json/cuatro.json');
+    const productos4 = await resultados4.json();
+    
+    console.log(productos4);
+
+    const tabla = document.createElement('table');
+    const thead = document.createElement('thead');
+    const caption = document.createElement('caption');
+    caption.textContent = 'Personal';
+    tabla.appendChild(caption);
+    const tbody = document.createElement('tbody');
+    const trh = document.createElement('tr');
+    const th1 = document.createElement('th');
+    const th2 = document.createElement('th');
+    const th3 = document.createElement('th');
+    const th4 = document.createElement('th');
+    const th5 = document.createElement('th');
+    const th6 = document.createElement('th');
+    
+    th1.textContent = 'Nombre';
+    th2.textContent = 'Apellido';
+    th3.textContent = 'Fecha de nacimiento';
+    th4.textContent = 'Puesto';
+    th5.textContent = 'Departamento';
+    th6.textContent = 'Número';
+    
+    trh.appendChild(th1);
+    trh.appendChild(th2);
+    trh.appendChild(th3);
+    trh.appendChild(th4);
+    trh.appendChild(th5);
+    trh.appendChild(th6);
+    
+    thead.appendChild(trh);
+    tabla.appendChild(thead);
+
+    productos4.forEach((producto, index) => {
+        try{
+        const tr = document.createElement('tr');
+        const td1 = document.createElement('td');
+        const td2 = document.createElement('td');
+        const td3 = document.createElement('td');
+        const td4 = document.createElement('td');
+        const td5 = document.createElement('td');
+        const td6 = document.createElement('td');
+        
+        td1.textContent = producto.nombre;
+        td2.textContent = producto.apellido;
+        td3.textContent = producto.fecha_nacimiento;
+        td4.textContent = producto.puesto;
+        td5.textContent = producto.departamento;
+        td6.textContent = producto._numero;
+        
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tr.appendChild(td5);
+        tr.appendChild(td6);
+        if(index % 2 === 0){
+            tr.classList.add('par');
+        }else{
+            tr.classList.add('impar');
+        }
+        
+        
+        tbody.appendChild(tr);
+        } catch (error) {
+            console.error('Error al procesar el producto en el índice ' + index + ':', error);
+        }
+    });
+    
+    tabla.appendChild(tbody);
+    document.getElementById('resultado4').appendChild(tabla);
+    document.getElementById('resultado4').classList.add('cajares');
+});
+
 
 
 
